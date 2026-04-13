@@ -18,6 +18,10 @@ object feroz {
     method correr(){
         pesoActual = pesoActual - 1
     }
+
+    method disfrazarseDeAbuelita() {
+       return true
+    }
 }
 
 object caperucita {
@@ -41,19 +45,15 @@ object cazador {
   
 }
 
-//comida y canasta
+//canasta con manzanas
 
 object canasta {
-    var peso = 0
-    method peso() = peso
+    const pesoDeManzana = 0.2
+    var cantidadDeManzanas = 6
+    method cantidadDeManzanas() = cantidadDeManzanas
+    method peso() = cantidadDeManzanas * pesoDeManzana
 
-    method agregar(comida) {
-        peso = peso + comida.peso()
+    method perderManzana() {
+        cantidadDeManzanas -= 1
     }
-}
-
-object manzana {
-    var peso = 0.2
-    method peso() = peso
-    
 }
